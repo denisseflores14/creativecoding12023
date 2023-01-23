@@ -3,3 +3,13 @@
 *{background-color:black;}
 h1 {color:white;}
 h2 { color: beige;}
+
+.box{
+    background-color: blanchedalmond;
+    width: 20vw;
+    height: 5vw;
+    padding: 0;
+    border-radius: 2vw;
+    box-shadow: 5px 5px 5px 5px #8e1414;
+}
+
