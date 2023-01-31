@@ -1,0 +1,27 @@
+/**** THIS IS THE STYLE */
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    padding:10vw;
+}
+
+.box{
+    background-color:rgb(204, 100, 100);
+    width: 20vw;
+    height: 20vw;
+    padding: 1vw;
+    border-radius: 2vw;
+    box-shadow: 5px 2px 5px 5px rgb(121, 28, 28);
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.box:hover{
+    background-color: black;
+    color: aliceblue;
+    transform: translate3d(0,0,0) perspective(200px) rotateY(20deg);
+    transition-property: all;
+    transition-duration: 1s;
+}

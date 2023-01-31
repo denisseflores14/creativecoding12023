@@ -1,0 +1,35 @@
+/**** THIS IS THE STYLE */
+*{
+    background-color: black;
+}
+
+.moon{
+    background-color:black;
+    width: 3vw;
+    height: 7vw;
+    background-image:url(img/moon1.jpg);
+    background-size: auto 10vw;
+    animation-name: phases, moonmovement;
+    animation-duration: 30s, 40s;
+    animation-timing-function:steps(7) linear;
+    animation-iteration-count: infinite, infinite;
+}
+
+@keyframes phases {
+    0%{
+background-position:0 0;
+    }
+    100%{
+background-position: -72vw 0;
+    }
+}
+
+@keyframes moonmovement {
+    0%{
+transform: translateX(0vw);
+    }
+    100%{
+transform: translateX(100vw);
+    }
+}
+
