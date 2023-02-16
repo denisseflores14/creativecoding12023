@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene antilias="true" fog="type: linear; color #000; near: 10; far: 100">
+
+            <a-assets>
+                <img id="kasse" src="img/kasse.jpg">
+                <img id="wallimg" src="img/brickwall.jpg">
+                <img id="doorimg" src="img/entrance.jpg">
+                <img id="bodega" src="img/bodegalogo.png">
+                <img id="background" src="img/background.webp">
+                <img id="cloud" src="img/cloud.jpg">
+                <img id="hall1" src="img/hall1.jpg">
+                <img id="hall2" src="img/hall2.jpg">
+            </a-assets>
+
+            <a-sky src="#background"></a-sky>
+
+            <a-box class="ground" position="2 0 0" src="#cloud" height="1" width="50" depth="20" shadow="cast:true"></a-box>
+
+            <a-box class="wall" material="shader: flat; src: #bodega" position="19 3 -10" color="white
+            " height="5" width="18" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="wall" material="shader: flat; src: #kasse" position="-10 3 -5" color="white
+            " height="5" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="wall" material="shader: flat; src: #wallimg" position="10 3 -5" color="white
+            " height="5" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="wall" material="shader: flat; src: #wallimg" position="5 3 -10" color="white
+            " height="5" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="wall" material="shader: flat; src: #wallimg" position="-5 3 -10" color="white
+            " height="5" width="10" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="frontwall" material="shader: flat; src: #wallimg" position="6 3 0" color="white
+            " height="5" width="8" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="frontwall" material="shader: flat; src: #wallimg" position="-6 3 0" color="white
+            " height="5" width="8" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="redstripe" material="shader: flat" position="-10 6 -5" color="red
+            " height="1" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="redstripe" material="shader: flat" position="10 6 -5" color="red
+            " height="1" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="redstripe" material="shader: flat" position="5 6 -10" color="red
+            " height="1" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="redstripe" material="shader: flat" position="-5 6 -10" color="red
+            " height="1" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="redstripe" material="shader: flat" position="0 6 0" color="red
+            " height="1" width="20" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="greenstripe" material="shader: flat" position="-10 7 -5" color="green
+            " height="1" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="greenstripe" material="shader: flat" position="10 7 -5" color="green
+            " height="1" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="greenstripe" material="shader: flat" position="5 7 -10" color="green
+            " height="1" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="greenstripe" material="shader: flat" position="-5 7 -10" color="green
+            " height="1" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="greenstripe" material="shader: flat" position="0 7 0" color="green
+            " height="1" width="20" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="yellowstripe" material="shader: flat" position="-10 8 -5" color="yellow
+            " height="1" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="yellowstripe" material="shader: flat" position="10 8 -5" color="yellow
+            " height="1" width="0.1" depth="10" shadow="cast:true"></a-box>
+            <a-box class="yellowstripe" material="shader: flat" position="5 8 -10" color="yellow
+            " height="1" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="yellowstripe" material="shader: flat" position="-5 8 -10" color="yellow
+            " height="1" width="10" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="yellowstripe" material="shader: flat" position="0 8 0" color="yellow
+            " height="1" width="20" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="hall1" material="shader: flat; src: #hall1" position="5 3 -9" color="white
+            " height="5" width="5" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="hall2" material="shader: flat; src: #hall2" position="-5 3 -9" color="white
+            " height="5" width="5" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-sphere color="white" radius="5" position="-25 40 -40"></a-sphere>
+
+
+            <a-entity position="0 0 0" rotation="0 0 0" animation="property: rotation; to: 0 300 0; dur: 1000 dir: alternate; easing: easeInOutQuad; loop:true">
+                
+                <a-box class="movingdoor" material="shader: flat; src: #doorimg" position="0 3 0" color="white" height="5" width="4" depth="0.1" shadow="cast:true"></a-box>
+
+            </a-entity>
+    </body>
+
+</html>
