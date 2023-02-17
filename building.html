@@ -12,20 +12,27 @@
                 <img id="wallimg" src="img/brickwall.jpg">
                 <img id="doorimg" src="img/entrance.jpg">
                 <img id="bodega" src="img/bodegalogo.png">
-                <img id="background" src="img/background.webp">
                 <img id="cloud" src="img/cloud.jpg">
                 <img id="hall1" src="img/hall1.jpg">
                 <img id="hall2" src="img/hall2.jpg">
+                <img id="cart" src="img/cart2.png">
+                <video id="alpuracow" autoplay loop="true" src="img/WhatsApp Video 2023-02-17 at 2.02.44 PM.mp4"></video>
             </a-assets>
 
-            <a-sky src="#background"></a-sky>
+            <a-sky src="#cloud"></a-sky>
 
-            <a-box class="ground" position="2 0 0" src="#cloud" height="1" width="50" depth="20" shadow="cast:true"></a-box>
+            <a-box class="ground" position="2 0 0" color="gray" height="1" width="50" depth="20" shadow="cast:true"></a-box>
 
-            <a-box class="wall" material="shader: flat; src: #bodega" position="19 3 -10" color="white
-            " height="5" width="18" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="wall" material="shader: flat; src: #bodega" position="18.5 3 -10" color="white
+            " height="5" width="17" depth="0.1" shadow="cast:true"></a-box>
+            <a-box class="tope" material="shader: flat" position="15 0.7 -8" color="yellow
+            " height="0.3" width="3" depth="0.3" shadow="cast:true"></a-box>
+            <a-box class="tope" material="shader: flat" position="19 0.7 -8" color="yellow
+            " height="0.3" width="3" depth="0.3" shadow="cast:true"></a-box>
+            <a-box class="tope" material="shader: flat" position="23 0.7 -8" color="yellow
+            " height="0.3" width="3" depth="0.3" shadow="cast:true"></a-box>
 
-            <a-box class="wall" material="shader: flat; src: #kasse" position="-10 3 -5" color="white
+            <a-box class="wall" material="shader: flat; src: #wallimg" position="-10 3 -5" color="white
             " height="5" width="0.1" depth="10" shadow="cast:true"></a-box>
             <a-box class="wall" material="shader: flat; src: #wallimg" position="10 3 -5" color="white
             " height="5" width="0.1" depth="10" shadow="cast:true"></a-box>
@@ -33,6 +40,9 @@
             " height="5" width="10" depth="0.1" shadow="cast:true"></a-box>
             <a-box class="wall" material="shader: flat; src: #wallimg" position="-5 3 -10" color="white
             " height="5" width="10" depth="0.1" shadow="cast:true"></a-box>
+
+            <a-box class="kasse" material="shader: flat; src: #kasse" position="-9 3 -5" color="white
+            " height="5" width="0.1" depth="10" shadow="cast:true"></a-box>
 
             <a-box class="frontwall" material="shader: flat; src: #wallimg" position="6 3 0" color="white
             " height="5" width="8" depth="0.1" shadow="cast:true"></a-box>
@@ -79,12 +89,24 @@
 
             <a-sphere color="white" radius="5" position="-25 40 -40"></a-sphere>
 
+            <a-video src="#alpuracow" width="3" height="5" position="6 3 1"></a-video>
+
 
             <a-entity position="0 0 0" rotation="0 0 0" animation="property: rotation; to: 0 300 0; dur: 1000 dir: alternate; easing: easeInOutQuad; loop:true">
                 
                 <a-box class="movingdoor" material="shader: flat; src: #doorimg" position="0 3 0" color="white" height="5" width="4" depth="0.1" shadow="cast:true"></a-box>
 
             </a-entity>
+
+            <a-entity position="0 -1.5 0" rotation="0 -10 0" animation="property: rotation; to: 0 10 0; dur: 4000 dir: alternate; easing: easeInOutQuad; loop:true">
+                
+                <a-box class="movingcarts" material="shader: flat; src: #cart" position="-20 3 0" color="grey" height="2" width="2" depth="3" shadow="cast:true"></a-box>
+                <a-box class="movingcarts" material="shader: flat; src: #cart" position="-14 3 4" color="grey" height="2" width="2" depth="3" shadow="cast:true"></a-box>
+
+            </a-entity>
+
+
+
     </body>
 
 </html>
