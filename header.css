@@ -9,6 +9,7 @@ body{
 
 .box{
     background-color:rgb(204, 100, 100);
+    padding: 2vw;
     width: 20vw;
     height: 8vw;
     border-radius: 2vw;
